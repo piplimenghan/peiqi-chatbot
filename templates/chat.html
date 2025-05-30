@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> 聊天机器人（李孟翰）</title>
+    <style>
+        body { font-family: sans-serif; background: #f9f9f9; padding: 20px; }
+        .chat-box { width: 600px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .message { margin-bottom: 10px; }
+        .user { color: #333; }
+        .bot { color: #008080; }
+        input[type=text] { width: 80%; padding: 8px; margin-right: 10px; }
+        input[type=submit] { padding: 8px 16px; }
+    </style>
+</head>
+<body>
+    <div class="chat-box">
+        <h2>🧠 DeepSeek 聊天机器人</h2>
+        {% for msg in chat_history %}
+            <div class="message">
+                {% if msg.role == 'user' %}
+                    <strong class="user">你：</strong>{{ msg.content }}
+                {% else %}
+                    <strong class="bot">机器人：</strong>{{ msg.content }}
+                {% endif %}
+            </div>
+        {% endfor %}
+        <form method="post">
+            <input type="text" name="user_input" autofocus placeholder="说点什么..." required>
+            <input type="submit" value="发送">
+        </form>
+        <p style="font-size:12px;color:#888;">输入“清除记忆”或“退出”可重置对话</p>
+    </div>
+    <div style="text-align: center; font-size: 12px; color: #888; padding: 15px;">
+        © 2025 佩奇AI助手. 保留所有权利。
+    </div>
+</body>
+</html>
