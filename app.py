@@ -4,7 +4,7 @@ import requests
 app = Flask(__name__)
 app.secret_key = 'supersecret'
 
-API_KEY = "你的API密钥"
+API_KEY = "sk-da124c10318142c88e682eceb2f58a70"
 API_URL = "https://api.deepseek.com/v1/chat/completions"
 SYSTEM_PROMPT = {"role": "system", "content": "你是一个友好、聪明的中文聊天助手。请简洁、自然地回复用户。"}
 
