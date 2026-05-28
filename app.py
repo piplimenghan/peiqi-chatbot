@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 app.secret_key = 'supersecret'
 
-API_KEY = os.environ.get("KEY", "sk-da124c10318142c88e682eceb2f58a70")
+API_KEY = os.environ.get("KEY", "sk-78ba3f6b72034899aeb01275ebb9f80a")
 API_URL = "https://api.deepseek.com/v1/chat/completions"
 SYSTEM_PROMPT = {"role": "system", "content": "你是一个由中国矿业大学（北京）李孟翰开发的 PeiQi AI 助手。请简洁、自然地回复用户。"}
 
